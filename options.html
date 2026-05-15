@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Gap Analyzer - Settings</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-color);
+    }
+    .options-container {
+      width: 400px;
+      padding: 24px;
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .status-msg {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 6px;
+      display: none;
+      font-size: 0.9rem;
+    }
+    .status-msg.success {
+      display: block;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--success-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="options-container">
+    <header>
+      <h1>Settings</h1>
+    </header>
+    
+    <div class="form-group">
+      <label for="api-key">Google Gemini API Key</label>
+      <input type="password" id="api-key" placeholder="AIzaSy..." />
+      <p class="description" style="margin-top: 8px; font-size: 0.8rem;">
+        Your API key is stored securely in your browser's local storage. You can get a free key from <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color: var(--accent-color);">Google AI Studio</a>.
+      </p>
+    </div>
+    
+    <div class="button-group">
+      <button id="save-settings-btn" class="primary-btn">Save Settings</button>
+    </div>
+    
+    <div id="status-msg" class="status-msg"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Gap Analyzer</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Research Gap Analyzer</h1>
+      <button id="settings-btn" class="icon-btn" title="Settings">⚙️</button>
+    </header>
+
+    <!-- Main View -->
+    <main id="main-view">
+      <p class="description">Analyze the current page to find methodological gaps and generate future research problem statements.</p>
+      
+      <button id="analyze-btn" class="primary-btn">
+        <span class="btn-text">Analyze Paper</span>
+        <span class="btn-loader" style="display: none;"></span>
+      </button>
+
+      <div id="status-container" class="status-box" style="display: none;">
+        <p id="status-text"></p>
+      </div>
+
+      <div id="results-container" style="display: none;">
+        <div class="result-card">
+          <h3>Core Claim</h3>
+          <p id="res-claim"></p>
+        </div>
+
+        <div class="result-card">
+          <h3>Logical Gaps Identified</h3>
+          <ul id="res-gaps"></ul>
+        </div>
+
+        <div class="result-card highlight">
+          <h3>Proposed Problem Statements</h3>
+          <div id="res-problems"></div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
